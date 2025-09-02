@@ -72,4 +72,4 @@ def generate_all_tables():
     session.commit()
 
 
-# generate_all_tables()
+generate_all_tables()

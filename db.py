@@ -26,13 +26,13 @@ DBSession = sessionmaker(bind=engine)
 db_session = DBSession()
 
 # test DB
-print(db_session.query(text("1 + 1")).one())
+# print(db_session.query(text("1 + 1")).one())
 
 
-Base = declarative_base()
-Base.metadata.create_all(engine)
+# Base = declarative_base()
+# Base.metadata.create_all(engine)
 
 
 # db_session.add_all(students)
 # db_session.commit()
-# print(db_session.execute(select(Teacher)).all())
+print(db_session.execute(select(Teacher)).all())

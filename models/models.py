@@ -17,8 +17,6 @@ class Student(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(120), nullable=False)
     group_id = Column(Integer, ForeignKey("groups.id"))
-    # alembic test
-    email = Column(String(120), nullable=False)
 
     group = relationship("Group", back_populates="students")
     grades = relationship("Grade", back_populates="student")
